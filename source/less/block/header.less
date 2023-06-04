@@ -1,0 +1,57 @@
+@import '../variables.less';
+
+.header {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: @color-black;
+    background-image: url('../img/header-background.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    @media (min-width: @width-table) {
+    }
+
+    @media (min-width: @width-desktop) {
+        grid-area: header;
+    }
+}
+
+.header__logo {
+    width: 320px;
+    height: 250px;
+    align-self: center;
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    background-image: url('../img/logo-img.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+
+    @media (min-width: @width-table) {
+        width: 640px;
+    }
+
+    @media (min-width: @width-desktop) {
+        width: 980px;
+    }
+}
+
+.header__logo-name {
+    align-self: center;
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    letter-spacing: 5px;
+    line-height: 20px;
+    color: #313131;
+
+    @media (min-width: @width-table) {
+        font-weight: 600;
+        font-size: 50px;
+        letter-spacing: 10px;
+    }
+}

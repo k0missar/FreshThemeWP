@@ -1,0 +1,131 @@
+@import '../variables.less';
+
+.post {
+    width: 320px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @media (min-width: @width-table) {
+        width: 640px;
+    }
+
+    @media (min-width: @width-desktop) {
+        padding: 0;
+        width: 670px;
+        grid-area: content;
+    }
+}
+
+.post__item {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: @width-desktop) {
+        padding: 15px;
+    }
+}
+
+.post__item-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+
+    @media (min-width: @width-table) {
+        height: 250px;
+    }
+
+    @media (min-width: @width-desktop) {
+        height: 325px;
+    }
+}
+
+.post__title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    letter-spacing: 0.5px;
+    line-height: 36px;
+    color: @color-black-a1;
+    text-align: center;
+}
+
+.post__info {
+    padding-bottom: 10px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: @color-silver;
+}
+
+.post__info a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: @color-silver;
+    text-decoration: none;
+}
+
+.post__text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: @color-black-a1;
+    text-align: justify;
+}
+
+.post__text p:first-child::first-letter {
+    margin-right: 5px;
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 76px;
+    font-weight: 600;
+    line-height: 65px;
+    float: left;
+}
+
+.post__text h2,
+.post__text h3,
+.post__text h4,
+.post__text h5,
+.post__text h6 {
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.post__text h2 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 26px;
+}
+
+.post__text h3 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 22px;
+}
+
+.post__text h4 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 19px;
+    line-height: 19px;
+}
+
+.post__text h5 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 17px;
+    line-height: 17px;
+}
+
+.post__text h6 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 15px;
+    line-height: 15px;
+}

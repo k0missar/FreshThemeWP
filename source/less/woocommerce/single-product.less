@@ -1,0 +1,262 @@
+.single-product__container {
+    width: 980px;
+    margin: 0 auto;
+    display: grid;
+    justify-self: center;
+    grid-template-columns: 1fr max-content;
+    grid-template-rows: max-content 1fr;
+    grid-template-areas: 'header header' 'product aside';
+}
+
+.single-product__container .product {
+    grid-area: product;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: max-content 1fr;
+}
+
+.single-product__container .woocommerce-tabs {
+    grid-column: 1/3;
+}
+
+//Хлебные крошки
+.woocommerce-breadcrumb {
+    margin-bottom: 10px;
+}
+
+.woocommerce-breadcrumb a {
+    color: @color-black-a2;
+    text-decoration: none;
+
+    &:hover {
+        color: @color-biege;
+    }
+}
+
+//Галерея изображений продукта
+.single-product__container .product .woocommerce-product-gallery {
+    opacity: 1 !important;
+}
+
+.woocommerce-product-gallery__wrapper {
+    width: 320px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.woocommerce-product-gallery__wrapper .woocommerce-product-gallery__image {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.woocommerce-product-gallery__wrapper
+    .woocommerce-product-gallery__image--isOpen {
+    width: 320px;
+    height: 300px;
+    order: -1;
+}
+
+.woocommerce-product-gallery__wrapper
+    .woocommerce-product-gallery__image
+    a
+    img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+// Информация о товаре
+.single-product__container .product_title {
+    margin-top: 0;
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    letter-spacing: 0.5px;
+    line-height: 36px;
+    color: @color-black-a1;
+}
+
+.single-product__container .price {
+    margin-top: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: 0.5px;
+    line-height: 36px;
+    color: @color-black-a1;
+}
+
+.single-product__container .cart {
+    display: flex;
+    gap: 10px;
+}
+
+.single-product__container .cart input {
+    width: 150px;
+    height: 50px;
+    padding: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: 0.5px;
+    line-height: 36px;
+    color: @color-black-a1;
+    border: 2px solid @color-silver-a1;
+
+    &:hover, &:focus, &:active {
+        border: 2px solid @color-biege;
+        outline: none;
+        transition: .5s;
+    }
+}
+
+.single-product__container .button {
+    width: max-content;
+    height: 50px;
+    padding: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+    color: @color-black-a1;
+    background-color: @color-white;
+
+    &:hover {
+        color: @color-white;
+        background-color: @color-biege;
+        border: none;
+        transition: 0.5s;
+    }
+}
+
+.single-product__container .product_meta {
+    margin-top: 10px;
+}
+
+.single-product__container .product_meta a {
+    color: @color-black-a2;
+    text-decoration: none;
+
+    &:hover {
+        color: @color-biege;
+    }
+}
+
+// Табы продукта
+.single-product__container .tabs {
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    column-gap: 10px;
+}
+
+.single-product__container .tabs a {
+    width: max-content;
+    display: inline-block;
+    align-self: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    line-height: 60px;
+    color: @color-black-a2;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+        color: @color-biege;
+    }
+}
+
+.tabs-link--current {
+        color: @color-biege !important;
+    }
+
+.single-product__container h2,
+.single-product__container h3,
+.single-product__container h4,
+.single-product__container h5,
+.single-product__container h6 {
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.woocommerce-Tabs-panel {
+    &--open {
+        display: block;
+    }
+
+    &--close {
+        display: none;
+    }
+}
+
+//Блок отзывов о товаре
+.single-product__container .comment-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.single-product__container .comment-form select {
+    display: block;
+}
+
+.single-product__container .comment-form textarea {
+    width: 100%;
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+    color: @color-black-a1;
+    border: 2px solid @color-silver-a1;
+
+    &:hover, &:focus, &:active {
+        border-color: @color-biege;
+        outline: none;
+        transition: .5s;
+    }
+}
+
+.single-product__container .comment-form input {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+    color: @color-black-a1;
+    border: 2px solid @color-silver-a1;
+
+    &:hover, &:focus, &:active {
+        border-color: @color-biege;
+        outline: none;
+        transition: .5s;
+    }
+}
+
+.single-product__container .comment-form .submit {
+    width: max-content;
+    height: 50px;
+    padding: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+    color: @color-black-a1;
+    background-color: @color-white;
+
+    &:hover {
+        color: @color-white;
+        background-color: @color-biege;
+        border: none;
+        transition: 0.5s;
+    }
+}

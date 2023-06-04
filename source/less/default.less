@@ -1,0 +1,43 @@
+@import 'variables.less';
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.page-body {
+    @media (min-width: @width-desktop) {
+        margin: 0 auto;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content 1fr max-content;
+        grid-template-areas:
+            'header'
+            'container'
+            'footer';
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        color: @color-black-a1;
+    }
+}
+
+.container {
+    @media (min-width: @width-desktop) {
+        width: 980px;
+        grid-area: container;
+        justify-self: center;
+        display: grid;
+        grid-template-columns: 1fr max-content;
+        grid-template-rows: 1fr;
+        grid-template-areas: 'main aside';
+        row-gap: 20px;
+    }
+}

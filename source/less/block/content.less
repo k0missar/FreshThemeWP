@@ -1,0 +1,115 @@
+@import '../variables.less';
+
+.content {
+    width: 320px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @media (min-width: @width-table) {
+        width: 640px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    @media (min-width: @width-desktop) {
+        padding: 0;
+        width: 670px;
+        grid-area: content;
+        gap: 5px;
+    }
+}
+
+.content__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: @width-desktop) {
+        padding: 15px;
+    }
+
+    &:hover {
+        @media (min-width: @width-desktop) {
+            box-shadow: 0 5px 15px rgba(@color-black-a2-rgb, 0.15);
+            outline: 0;
+        }
+    }
+}
+
+.content__item-image {
+    width: 305px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.content__date {
+    display: flex;
+    justify-content: center;
+}
+
+.content__date p {
+    margin-bottom: 5px;
+    font-family: 'Open Sans', serif;
+    font-size: 12px;
+    color: @color-silver;
+    text-decoration: none;
+}
+
+.content__title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.content__title-link {
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    letter-spacing: 0.5px;
+    line-height: 36px;
+    color: @color-black-a1;
+    text-decoration: none;
+}
+
+.content__title-link:hover {
+    color: @color-biege;
+}
+
+.content__category {
+    padding-bottom: 10px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 33%;
+        width: 33%;
+        border-bottom: 1px solid @color-silver;
+    }
+}
+
+.content__category p {
+    margin: 5px;
+}
+
+.content__category a {
+    font-family: 'Open Sans', serif;
+    font-size: 14px;
+    color: @color-silver;
+    text-decoration: none;
+}
+
+.content__text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: @color-black-a1;
+    text-align: justify;
+}

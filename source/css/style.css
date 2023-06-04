@@ -1,0 +1,59 @@
+.product_category {
+  width: 980px;
+  margin: 0 auto;
+  display: grid;
+  justify-self: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "breadcrumb breadcrumb aside" "productsHeader resultCount aside" "productsHeader ordering aside" "products products aside";
+}
+.product_category .woocommerce-breadcrumb {
+  grid-area: breadcrumb;
+}
+.product_category .woocommerce-products-header {
+  grid-area: productsHeader;
+}
+.product_category .woocommerce-result-count {
+  grid-area: resultCount;
+}
+.product_category .woocommerce-ordering {
+  grid-area: ordering;
+}
+.product-category__list {
+  margin: 0;
+  padding: 20px 0;
+  grid-area: products;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+.product-category__item {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "image title title" "image description description" "image price cart";
+}
+.product-category__item img {
+  grid-area: image;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+.product-category__item-title {
+  grid-area: title;
+}
+.product-category__item-description {
+  grid-area: description;
+}
+.product-category__item .price {
+  grid-area: price;
+}
+.product-category__item .button {
+  grid-area: cart;
+  display: block;
+}
+.product_category .woocommerce-notices-wrapper {
+  display: none;
+}
+/*# sourceMappingURL=./style.css.map */

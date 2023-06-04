@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap');
+
+@import 'variables.less';
+
+// @color-white: #ffffff;
+// @color-black: #000000;
+// @color-black-rgb: 0, 0, 0;
+// @color-black-a1: #313131;
+// @color-black-a2: #222222;
+// @color-black-a2-rgb: 34, 34, 34;
+// @color-silver: #888888;
+// @color-silver-a1: #e8e8e8;
+// @color-biege: #c69c53;
+// @color-biege-rgb: 198, 156, 83;
+
+// @width-table: 640px;
+// @width-desktop: 980px;
+
+@import 'default.less';
+@import 'block/header.less';
+@import 'block/nav-menu.less';
+@import 'block/main.less';
+@import 'block/content.less';
+@import 'block/post.less';
+@import 'block/social-icon.less';
+@import 'block/aside.less';
+@import 'block/footer.less';
+
+//woocommerce
+@import 'woocommerce/product-category.less';
+@import 'woocommerce/single-product.less';
+
+.about {
+    width: 320px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (min-width: @width-table) {
+        width: 640px;
+    }
+
+    @media (min-width: @width-desktop) {
+        width: 300px;
+    }
+}
+
+.about__img {
+    align-self: center;
+}
+
+.about__title {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.about__info {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+    text-align: center;
+}
